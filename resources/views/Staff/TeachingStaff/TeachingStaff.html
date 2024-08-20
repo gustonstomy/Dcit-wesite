@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Teaching Staff</title>
+   
+</head>
+<body>
+    <!--=================================== NavBar UpperSection==================================== -->
+
+    
+   <div class="hidden w-full h-14 flex items-center justify-between bg-blue-900 px-40 px-40 lg:flex">
+    <div class="flex items-center space-x-8 ml-12">
+        <a href="https://www.instagram.com/citsaucc?igsh=MWN1Nmd4amVmNWNwOA==" class="text-white hover:text-[#ff6b42]">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/citsa_ucc?s=11" class="text-white hover:text-[#ff6b42]">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-white hover:text-[#ff6b42]">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/dcsitcitsa?mibextid=LQQJ4d" class="text-white hover:text-[#ff6b42]">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/computer-science-and-information-technology-student-association-ucc/"
+           class="text-white hover:text-[#ff6b42]">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    <div class="flex items-center justify-center text-lg space-x-8">
+        <div class="flex items-center space-x-2 hover:text-[#ff6b42]">
+            <i class="fas fa-phone text-white"></i>
+            <a href="tel:+233 (03321) 30096" class="text-white no-underline">+233 (03321) 30096</a>
+        </div>
+        <div class="flex items-center space-x-2 hover:text-[#ff6b42]">
+            <i class="fas fa-envelope text-white"></i>
+            <a href="mailto:dcsit@ucc.edu.gh" class="text-white no-underline">dcsit@ucc.edu.gh</a>
+        </div>
+    </div>
+</div>
+
+
+   <!-- Down navbar -->
+<!-- Down navbar -->
+<div class="navbar-container flex justify-between items-center md:px-20 lg:px-1 xl:px-20 h-32 bg-gray-100 relative z-50">
+    <div class="branding flex items-center pl-4 md:pl-8 lg:pl-1 lg:pr-1 w-74 h-40">
+        <img src="UCC.png" class="default-logo w-20 h-20 pr-2" alt="Department logo">
+        <div class="site-title-container flex flex-col">
+            <span class="site-title text-xl font-bold pl-10">DCSIT</span>
+            <span class="site-subtitle text-sm inline-block leading-relaxed">
+                Department Of Computer Science &<br> Information Technology
+            </span>
+        </div>
+    </div>
+    <div class="hamburger-menu cursor-pointer text-2xl pr-8  lg:hidden" onclick="toggleMenu()">
+        <span class="hamburger-icon">&#9776;</span>
+    </div>
+    <nav id="navbar" class="hidden lg:flex flex-col lg:flex-row  md:bg-red-500">
+        <!-- <div class="close-btn lg:hidden absolute top-0 right-0 mt-4 mr-4 text-2xl cursor-pointer" onclick="toggleMenu()">
+            <span class="close-icon">&times;</span>
+        </div> -->
+        <ul class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 lg:space-x-8 lg:items-center z-50 top-0 lg:z-auto lg:static absolute bg-gray-100  w-[24em] md:w-[45em] left-10 transition-all ease-in duration ">
+           <div class="close-btn lg:hidden absolute top-0 right-0 mt-4 mr-4 text-2xl cursor-pointer" onclick="toggleMenu()">
+            <span class="close-icon">&times;</span>
+           </div>
+            <li><a href="index" class="text-lg hover:text-red-500">Home</a></li>
+            <li>
+                <a href="index" onclick="event.preventDefault(); toggleSubMenu('programmes');" class="text-lg flex items-center space-x-1">
+                    <span>Programmes</span><span class="dropdown-symbol">&#9662;</span>
+                </a>
+                <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50 " id="sub-programmes">
+                    <a href="programmes/undergraduate/undergraduate" class="block px-4 py-2 hover:bg-gray-100">Undergraduate</a>
+                    <a href="programmes/postgraduate/postgraduate" class="block px-4 py-2 hover:bg-gray-100">Postgraduate</a>
+                </div>
+            </li>
+            <li>
+                <a href="#" onclick="event.preventDefault(); toggleSubMenu('staff');" class="text-lg flex items-center space-x-1">
+                    <span>Staff</span><span class="dropdown-symbol">&#9662;</span>
+                </a>
+                <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50  " id="sub-staff">
+                    <a href="staff/teaching-staff/teaching-staff" class="block px-4 py-2 hover:bg-gray-100">Teaching Staff</a>
+                    <a href="staff/nonteaching-staff/non-teaching-staff" class="block px-4 py-2 hover:bg-gray-100">Non-Teaching Staff</a>
+                </div>
+            </li>
+            <li><a href="events" class="text-lg hover:text-red-500">Events</a></li>
+            <li><a href="about" class="text-lg hover:text-red-500">About</a></li>
+            <li><a href="contact" class="text-lg hover:text-red-500">Contact</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+ <div id="slider" class="relative w-full h-[20rem] lg:h-[35rem]">
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-100">
+            <img src="../../images/T12.jpg" alt="Slide 1" class="w-full h-full object-cover" />
+        </div>
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-0">
+            <img src="../../images/pro.jpg" alt="Slide 2" class="w-full h-full object-cover" />
+        </div>
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-0">
+            <img src="../../images/T6.jpg" alt="Slide 3" class="w-full h-full object-cover" />
+        </div>
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-0">
+            <img src="../../images/T4.jpg" alt="Slide 4" class="w-full h-full object-cover" />
+        </div>
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-0">
+            <img src="../../images/T5.png" alt="Slide 5" class="w-full h-full object-cover" />
+        </div>
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-0">
+            <img src="../../images/Reg.jpg" alt="Slide 6" class="w-full h-full object-cover" />
+        </div>
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-0">
+            <img src="../../images/T7.jpg" alt="Slide 7" class="w-full h-full object-cover" />
+        </div>
+        <div class="slide absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-0">
+            <img src="../../images/NOT6.jpg" alt="Slide 8" class="w-full h-full object-cover" />
+        </div>
+    </div>
+
+  <!-- =================Staff Grid=========================================== -->
+    <div>
+        <h2 class="text-center text-2xl underline font-bold mt-8">Our Teaching Staff</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-8 md:px-16 lg:px-32 mt-8">
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/hodd.jpg" alt="Dr. Abdul-Lateef Yussif" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Dr. Abdul-Lateef Yussif</h3>
+                <p class="text-gray-600">Head Of Department</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/haruna.jpg" alt="Dr. Charles Roland Haruna" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Dr. Charles Roland Haruna</h3>
+                <p class="text-gray-600">Departmental Registration & Examination Officer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/ppp.jpg" alt="Prof. Nii Narku Quaynor" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Prof. Nii Narku Quaynor</h3>
+                <p class="text-gray-600">Associate Professor</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/george.jpg" alt="Prof. George Aggrey" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Prof. George Aggrey</h3>
+                <p class="text-gray-600">Associate Professor</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/MrsAlimatu.png" alt="Dr. Mrs. Alimatu Saadia Yussiff" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Dr. Mrs. Alimatu Saadia Yussiff</h3>
+                <p class="text-gray-600">Senior Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/Regina.jpg" alt="Dr. Regina Esi Turkson" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Dr. Regina Esi Turkson</h3>
+                <p class="text-gray-600">Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/welborn.jpg" alt="Mr. Welborn Amoako Marful" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mr. Welborn Amoako Marful</h3>
+                <p class="text-gray-600">Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/Akotoye.jpg" alt="Mr. Xavier Kofi Akotoye" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mr. Xavier Kofi Akotoye</h3>
+                <p class="text-gray-600">Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/Isaac.jpg" alt="Mr. Isaac Armah" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mr. Isaac Armah</h3>
+                <p class="text-gray-600">Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/Elliot.jpg" alt="Mr. Elliot Kojo Attipoe" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mr. Elliot Kojo Attipoe</h3>
+                <p class="text-gray-600">Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/paul-arhin.jpg" alt="Mr. Paul Kobina Arhin Jnr." class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mr. Paul Kobina Arhin Jnr.</h3>
+                <p class="text-gray-600">Assistant Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/Mr_Frank.png" alt="Mr. Franklin Kome Amoo" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mr. Franklin Kome Amoo</h3>
+                <p class="text-gray-600">Assistant Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/Twum.jpg" alt="Mr. Francis Oppong Twum" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mr. Francis Oppong Twum</h3>
+                <p class="text-gray-600">Assistant Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/linda.png" alt="Miss Linda Otoo" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Miss Linda Otoo</h3>
+                <p class="text-gray-600">Assistant Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/EDT.jpg" alt="Dr. Emmanuel Dortey Tetteh" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Dr. Emmanuel Dortey Tetteh</h3>
+                <p class="text-gray-600">Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/mr-obuobi.jpg" alt="Dr. Daniel Obuobi" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Dr. Daniel Obuobi</h3>
+                <p class="text-gray-600">Lecturer</p>
+            </a>
+
+            <a href="https://example.com/dr-charles-roland-haruna" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
+                <img src="../../images/Akua.jpg" alt="Mrs. Akua Gyanba Morgan Acquah" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mrs. Akua Gyanba Morgan Acquah</h3>
+                <p class="text-gray-600">Principal Research Assistant (Teaching Associate)</p>
+            </a>
+        </div>
+    </div>
+ 
+<!-- ==============Footer Upper section==================================== -->
+  <div id="footerheader" class="transform px-2 md:py-5 md:px-2 py-5 xl:px-40 lg:py-20 xl:py-20 bg-blue-900 flex justify-between items-center transition-all duration-500 ease-in-out">
+        <h2 class="text-white text-[1em] md:text-[2.4rem]">Still wondering where to start?</h2>
+        <div>
+            <a href="/contact">
+                <button class="bg-[#ff6b42] hover:bg-white hover:text-[#ff6b42] text-white border border-[#ff6b42] rounded-full py-1 px-6 md:py-3 md:px-12 lg:mr-8 text-[0.6rem] md:text-[1.3rem] font-medium transition-colors duration-500">
+                    Contact us
+                </button>
+            </a>
+        </div>
+    </div>
+
+   <!--====================Footer Section ============================================= */ -->
+   <div class="py-8 md:py-16 px-6 lg:px-16 xl:px-44 h-[65vh] md:h-[40vh] xl:h-[60vh] bg-gray-900 text-white font-sans">
+    <div class="flex flex-wrap justify-between mb-12">
+        <div class="mb-6 md:mb-0">
+            <h4 class="text-xl font-medium mb-8">Menus</h4>
+            <a href="/UnderGraduate" class="block text-lg mb-4 hover:text-orange-500">Undergraduate</a>
+            <a href="/PostGraduate" class="block text-lg mb-4 hover:text-orange-500">Postgraduate</a>
+            <a href="/Teaching-Staff" class="block text-lg mb-4 hover:text-orange-500">Teaching-Staff</a>
+            <a href="/non-teaching-staff" class="block text-lg mb-4 hover:text-orange-500">Non Teaching-Staff</a>
+        </div>
+
+        <div class="mb-6 md:mb-0 flex flex-col">
+            <h4 class="text-xl font-medium mb-8">Contact Us</h4>
+            <a href="/" class="flex items-center mb-8 text-lg hover:text-orange-500">
+                <i class="fa-solid fa-phone-alt w-4 h-4 mr-2"></i>
+                +233 000 000 000
+            </a>
+            <a href="/" class="flex items-center mb-8 text-lg hover:text-orange-500">
+                <i class="fa-solid fa-envelope w-4 h-4 mr-2"></i>
+                dcsit@ucc.edu.gh
+            </a>
+            <p class="flex items-center text-lg">
+                <i class="fa-solid fa-clock w-4 h-4 mr-2 "></i>
+                Monday to Friday: 7:30AM - 4:30PM
+            </p>
+        </div>
+
+        <div class="mb-6 md:mb-0">
+            <h4 class="text-xl font-medium mb-8">Follow Us</h4>
+            <div class="flex space-x-4">
+                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-instagram"></i></a>
+                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-twitter"></i></a>
+                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-facebook"></i></a>
+                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center justify-between border-t border-gray-600 pt-6">
+        <p class="text-lg">Copyright &copy; 2024 Department Of Computer Science & Info. Tech</p>
+        <div class="flex flex-wrap space-x-4">
+            <a href="/" class="text-lg hover:text-orange-500">Home</a>
+            <a href="/about" class="text-lg hover:text-orange-500">About</a>
+            <a href="/contact" class="text-lg hover:text-orange-500">Contact</a>
+            <a href="/events" class="text-lg hover:text-orange-500">Events</a>
+        </div>
+    </div>
+</div>
+
+<script src="TeachingStaff.js"></script>
+</body>
+</html>
