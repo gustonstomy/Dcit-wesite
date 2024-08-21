@@ -1,4 +1,5 @@
-// ========================Hamburger Menu Js====================================
+ 
+  // ========================Hamburger Menu Js====================================
 
 let menuOpen = false; // State to manage the menu open/close state
 let subMenuOpen = null; // State to manage the sub-menu open/close state
@@ -29,6 +30,57 @@ function toggleSubMenu(menu) {
     document.getElementById('sub-' + subMenuOpen).classList.remove('hidden');
   }
 }
+
+
+
+// ==================================Slider JS==============================================
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('#slider > div');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+          slides.forEach((slide, i) => {
+              slide.style.opacity = i === index ? '1' : '0';
+          });
+      }
+
+      function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+      }
+
+      // Show the first slide
+      showSlide(currentSlide);
+
+      // Change slide every 3 seconds
+      setInterval(nextSlide, 3000);
+  });
+  
+
+
+// <!-- ============================Image Slider Section================================== -->
+document.addEventListener('DOMContentLoaded', function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.img-slider .slider');
+  const totalSlides = slides.length;
+  let transitioning = false;
+
+  function nextSlide() {
+    if (transitioning) return;
+    transitioning = true;
+
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % totalSlides;
+    slides[currentSlide].classList.add('active');
+
+    setTimeout(() => {
+      transitioning = false;
+    }, 500); // Match this to the CSS transition duration
+  }
+
+  setInterval(nextSlide, 3000);
+});
 
 // <!-- ============================Image Slider Section================================== -->
 document.addEventListener('DOMContentLoaded', function () {

@@ -12,114 +12,39 @@
     <title>Home</title>
 </head>
 <body>
-<!--=================================== NavBar UpperSection==================================== -->
-
-<div class="hidden w-full h-14  items-center justify-between bg-blue-900 px-40  lg:flex">
-  <div class="flex items-center space-x-8 ml-12">
-      <a href="https://www.instagram.com/citsaucc?igsh=MWN1Nmd4amVmNWNwOA==" class="text-white hover:text-[#ff6b42]">
-          <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://x.com/citsa_ucc?s=11" class="text-white hover:text-[#ff6b42]">
-          <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#" class="text-white hover:text-[#ff6b42]">
-          <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://www.facebook.com/dcsitcitsa?mibextid=LQQJ4d" class="text-white hover:text-[#ff6b42]">
-          <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/computer-science-and-information-technology-student-association-ucc/"
-         class="text-white hover:text-[#ff6b42]">
-          <i class="fab fa-linkedin"></i>
-      </a>
-  </div>
-  <div class="flex items-center justify-center text-lg space-x-8">
-      <div class="flex items-center space-x-2 hover:text-[#ff6b42]">
-          <i class="fas fa-phone text-white"></i>
-          <a href="tel:+233 (03321) 30096" class="text-white no-underline">+233 (03321) 30096</a>
-      </div>
-      <div class="flex items-center space-x-2 hover:text-[#ff6b42]">
-          <i class="fas fa-envelope text-white"></i>
-          <a href="mailto:dcsit@ucc.edu.gh" class="text-white no-underline">dcsit@ucc.edu.gh</a>
-      </div>
-  </div>
-</div>
-
-
- <!-- Down navbar -->
-<!-- Down navbar -->
-<div class="navbar-container flex justify-between items-center md:px-20 lg:px-1 xl:px-20 h-32 bg-gray-100 relative z-50">
-  <div class="branding flex items-center pl-4 md:pl-8 lg:pl-1 lg:pr-1 w-74 h-40">
-      <img src="../images/UCC.png" class="default-logo w-20 h-20 pr-2" alt="Department logo">
-      <div class="site-title-container flex flex-col">
-          <span class="site-title text-xl font-bold pl-10">DCSIT</span>
-          <span class="site-subtitle text-sm inline-block leading-relaxed">
-              Department Of Computer Science &<br> Information Technology
-          </span>
-      </div>
-  </div>
-  <div class="hamburger-menu cursor-pointer text-2xl pr-8  lg:hidden" onclick="toggleMenu()">
-      <span class="hamburger-icon">&#9776;</span>
-  </div>
-  <nav id="navbar" class="hidden lg:flex flex-col lg:flex-row  md:bg-red-500">
-      <!-- <div class="close-btn lg:hidden absolute top-0 right-0 mt-4 mr-4 text-2xl cursor-pointer" onclick="toggleMenu()">
-          <span class="close-icon">&times;</span>
-      </div> -->
-      <ul class="flex flex-col lg:flex-row space-y-4 lg:space-y-0  lg:space-x-8 lg:items-center z-50 top-0 lg:z-auto lg:static absolute bg-gray-100  w-[24em] md:w-[45em] left-10 transition-all ease-in duration ">
-         <div class="close-btn lg:hidden absolute top-0 right-0 mt-4 mr-4 text-2xl cursor-pointer" onclick="toggleMenu()">
-          <span class="close-icon">&times;</span>
-         </div>
-          <li><a href="#" class="text-lg hover:text-red-500">Home</a></li>
-          <li>
-              <a href="index" onclick="event.preventDefault(); toggleSubMenu('programmes');" class="text-lg flex items-center space-x-1">
-                  <span>Programmes</span><span class="dropdown-symbol">&#9662;</span>
-              </a>
-              <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50 " id="sub-programmes">
-                  <a href="programmes/undergraduate/undergraduate" class="block px-4 py-2 hover:bg-gray-100">Undergraduate</a>
-                  <a href="programmes/postgraduate/postgraduate" class="block px-4 py-2 hover:bg-gray-100">Postgraduate</a>
-              </div>
-          </li>
-          <li>
-              <a href="#" onclick="event.preventDefault(); toggleSubMenu('staff');" class="text-lg flex items-center space-x-1">
-                  <span>Staff</span><span class="dropdown-symbol">&#9662;</span>
-              </a>
-              <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50  " id="sub-staff">
-                  <a href="staff/teaching-staff/teaching-staff" class="block px-4 py-2 hover:bg-gray-100">Teaching Staff</a>
-                  <a href="staff/nonteaching-staff/non-teaching-staff" class="block px-4 py-2 hover:bg-gray-100">Non-Teaching Staff</a>
-              </div>
-          </li>
-          <li><a href="/Events/Events.html" class="text-lg hover:text-red-500">Events</a></li>
-          <li><a href="about" class="text-lg hover:text-red-500">About</a></li>
-          <li><a href="contact" class="text-lg hover:text-red-500">Contact</a></li>
-      </ul>
-  </nav>
-
-</div>
+ <!--======================= Down navbar====================== -->
+@include('includes.Navbar')
 
   <!-- ==================slider==================================== -->
    <div class="relative w-full h-[35rem] mb-8" id="slider">
         <div class="absolute w-full h-full opacity-100 transition-opacity duration-500 ease-in-out">
-            <img src="../images/BS.png" alt="Slide 1"  class="w-full h-full object-cover">
+            <img src="../images/BS.jpg" alt="Slide 1"  class="w-full h-full object-cover">
+            <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
+                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">BSc. Computer Science Studentswho graduate from the programme will be able to apply their skills to a variety of industries</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
+            </div>
+        </div>
+         <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
+            <img src="../images/Alor.jpg" alt="Slide 4"  class="w-full h-full object-cover">
+            <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
+                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">Undergraduate Programmes Bachelor of Computer Science Bachelor of Information Technology</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
+            </div>
         </div>
         <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
             <img src="../images/GRAT1.jpg" alt="Slide 2"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
-                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">BSc. Computer Science Students<br> who graduate from the programme will be able to apply their skills to a variety of industries</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
+                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">BSc. Computer Science Studentswho graduate from the programme will be able to apply their skills to a variety of industries</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
         </div>
         <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
-            <img src="../images/gge.png" alt="Slide 3"  class="w-full h-full object-cover">
-        </div>
-        <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
-            <img src="../images/Alor.jpg" alt="Slide 4"  class="w-full h-full object-cover">
+            <img src="../images/BGT.jpg" alt="Slide 3"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
-                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">Undergraduate Programmes <br> Bachelor of Computer Science <br> Bachelor of Information Technology</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
+                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">BSc. Computer Science Studentswho graduate from the programme will be able to apply their skills to a variety of industries</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
         </div>
         <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
             <img src="../images/NOT7.jpg" alt="Slide 5"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
-                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">Your further in Tech begins here!<br> Apply now to secure your spot <br>at  UCC  and embark on a<br> journey  filled with  innovation and endless opportunities</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
+                <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">Your further in Tech begins here!Apply now to secure your spot <br>at  UCC  and embark on ajourney  filled with  innovation and endless opportunities</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
         </div>
     </div>
@@ -193,7 +118,7 @@
       <p class="text-[1.1rem] text-gray-600 mb-5">
         A Computer Science or Information Technology degree teaches fundamentals of computing and prepares for tech careers
       </p>
-      <a href="/resources/views/Programmes/Undergraduate/undergraduate.html" class="text-[1.2em] text-blue-800 font-bold hover:text-paletteColor3">
+      <a href="{{route('undergraduate')}}" class="text-[1.2em] text-blue-800 font-bold hover:text-paletteColor3">
         Read More
       </a>
     </div>
@@ -208,7 +133,7 @@
       <p class="text-[1.1rem] text-gray-600 mb-5">
         Advanced Computer Science or Information Technology degree for tech careers and research
       </p>
-      <a href="/PostGraduate" class="text-[1.2em] text-blue-800 font-bold hover:text-paletteColor3">
+      <a href="{{route('postgraduate')}}" class="text-[1.2em] text-blue-800 font-bold hover:text-paletteColor3">
         Read More
       </a>
     </div>
@@ -274,8 +199,6 @@
     </div>
   </div>
 
-  <!-- ==========================Events section================================= -->
-   
 <!-- ====================Events section============================================ -->
   <div class="flex flex-col items-center text-center py-8 mt-16 mb-16">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -320,67 +243,11 @@
     </div>
 
  
-<!-- ==============Footer Upper section==================================== -->
-  <div id="footerheader" class="transform px-2 md:py-5 md:px-2 py-5 xl:px-40 lg:py-20 xl:py-20 bg-blue-900 flex justify-between items-center transition-all duration-500 ease-in-out">
-        <h2 class="text-white text-[1em] md:text-[2.4rem]">Still wondering where to start?</h2>
-        <div>
-            <a href="/contact">
-                <button class="bg-[#ff6b42] hover:bg-white hover:text-[#ff6b42] text-white border border-[#ff6b42] rounded-full py-1 px-6 md:py-3 md:px-12 lg:mr-8 text-[0.6rem] md:text-[1.3rem] font-medium transition-colors duration-500">
-                    Contact us
-                </button>
-            </a>
-        </div>
-    </div>
+ <!--=======================Footer====================== -->
+@include('includes.Footer')
 
-  <!--====================Footer Section ============================================= */ -->
-  <div class="py-8 md:py-16 px-6 lg:px-16 xl:px-44 h-[65vh] md:h-[40vh] xl:h-[60vh] bg-gray-900 text-white font-sans">
-    <div class="flex flex-wrap justify-between mb-12">
-        <div class="mb-6 md:mb-0">
-            <h4 class="text-xl font-medium mb-8">Menus</h4>
-            <a href="/UnderGraduate" class="block text-lg mb-4 hover:text-orange-500">Undergraduate</a>
-            <a href="/PostGraduate" class="block text-lg mb-4 hover:text-orange-500">Postgraduate</a>
-            <a href="/Teaching-Staff" class="block text-lg mb-4 hover:text-orange-500">Teaching-Staff</a>
-            <a href="/non-teaching-staff" class="block text-lg mb-4 hover:text-orange-500">Non Teaching-Staff</a>
-        </div>
+  {{-- <script src="../../../public/js/Home.js"></script> --}}
+  <script src="{{ asset('js/menu.js') }}"></script>
 
-        <div class="mb-6 md:mb-0 flex flex-col">
-            <h4 class="text-xl font-medium mb-8">Contact Us</h4>
-            <a href="/" class="flex items-center mb-8 text-lg hover:text-orange-500">
-                <i class="fa-solid fa-phone-alt w-4 h-4 mr-2"></i>
-                +233 000 000 000
-            </a>
-            <a href="/" class="flex items-center mb-8 text-lg hover:text-orange-500">
-                <i class="fa-solid fa-envelope w-4 h-4 mr-2"></i>
-                dcsit@ucc.edu.gh
-            </a>
-            <p class="flex items-center text-lg">
-                <i class="fa-solid fa-clock w-4 h-4 mr-2 "></i>
-                Monday to Friday: 7:30AM - 4:30PM
-            </p>
-        </div>
-
-        <div class="mb-6 md:mb-0">
-            <h4 class="text-xl font-medium mb-8">Follow Us</h4>
-            <div class="flex space-x-4">
-                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-instagram"></i></a>
-                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-twitter"></i></a>
-                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-facebook"></i></a>
-                <a href="/" class="text-xl hover:text-orange-500"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex flex-col lg:flex-row items-center justify-between border-t border-gray-600 pt-6">
-        <p class="text-lg">Copyright &copy; 2024 Department Of Computer Science & Info. Tech</p>
-        <div class="flex flex-wrap space-x-4">
-            <a href="/" class="text-lg hover:text-orange-500">Home</a>
-            <a href="/about" class="text-lg hover:text-orange-500">About</a>
-            <a href="/contact" class="text-lg hover:text-orange-500">Contact</a>
-            <a href="/events" class="text-lg hover:text-orange-500">Events</a>
-        </div>
-    </div>
-</div>
- <script src="{{ asset('js/Home.js') }}"></script>
-  <script src="../../../public/js/Home.js"></script>
 </body>
 </html>
