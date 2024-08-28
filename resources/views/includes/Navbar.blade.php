@@ -35,7 +35,7 @@
 <!-- Down navbar -->
 <div class="navbar-container flex justify-between items-center md:px-20 lg:px-1 xl:px-20 h-32 bg-gray-100 relative z-50">
   <div class="branding flex items-center pl-4 md:pl-8 lg:pl-1 lg:pr-1 w-74 h-40">
-      <img src="../images/UCC.png" class="default-logo w-20 h-20 pr-2" alt="Department logo">
+      <img src="/UCC.png" class="default-logo w-20 h-20 pr-2" alt="Department logo">
       <div class="site-title-container flex flex-col">
           <span class="site-title text-xl font-bold pl-10">DCSIT</span>
           <span class="site-subtitle text-sm inline-block leading-relaxed">
@@ -54,28 +54,72 @@
          <div class="close-btn lg:hidden absolute top-0 right-0 mt-4 mr-4 text-2xl cursor-pointer" onclick="toggleMenu()">
           <span class="close-icon">&times;</span>
          </div>
-          <li><a href="/" class="text-lg hover:text-red-500">Home</a></li>
-          <li><a href="{{route('About')}}" class="text-lg hover:text-red-500">About</a></li>
+          <li><a href="/" class="text-lg hover:text-red-500 {{ request()->is('/') ? 'text-red-500' : '' }}">Home</a></li>
+          <li><a href="{{route('About')}}" class="text-lg hover:text-red-500 {{ request()->is('About') ? 'text-red-500' : '' }}">About</a></li>
           <li>
-              <a href="index" onclick="event.preventDefault(); toggleSubMenu('programmes');" class="text-lg flex items-center space-x-1">
-                  <span>Programmes</span><span class="dropdown-symbol">&#9662;</span>
-              </a>
-              <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50 " id="sub-programmes">
-                  <a href="{{route('undergraduate')}}" class="block px-4 py-2 hover:bg-gray-100">Undergraduate</a>
-                  <a href="{{route('postgraduate')}}" class="block px-4 py-2 hover:bg-gray-100">Postgraduate</a>
-              </div>
-          </li>
+    <a href="#" 
+       onclick="event.preventDefault(); toggleSubMenu('programmes');" 
+       class="text-lg flex items-center space-x-1 
+              {{ request()->is('undergraduate') || request()->is('postgraduate') ? 'text-red-500' : '' }}">
+        <span>Programmes</span>
+        <span class="dropdown-symbol 
+              {{ request()->is('undergraduate') || request()->is('postgraduate') ? 'text-red-500' : '' }}">
+            &#9662;
+        </span>
+    </a>
+    <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50" id="sub-programmes">
+        <a href="{{ route('undergraduate') }}" 
+           class="block px-4 py-2 hover:bg-gray-100 
+                  {{ request()->is('undergraduate') ? 'text-red-500' : '' }}">
+            Undergraduate
+        </a>
+        <a href="{{ route('postgraduate') }}" 
+           class="block px-4 py-2 hover:bg-gray-100 
+                  {{ request()->is('postgraduate') ? 'text-red-500' : '' }}">
+            Postgraduate
+        </a>
+    </div>
+</li>
+
           <li>
-              <a href="#" onclick="event.preventDefault(); toggleSubMenu('staff');" class="text-lg flex items-center space-x-1">
-                  <span>Staff</span><span class="dropdown-symbol">&#9662;</span>
-              </a>
-              <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50  " id="sub-staff">
-                  <a href="{{route('TeachingStaff')}}" class="block px-4 py-2 hover:bg-gray-100">Teaching Staff</a>
-                  <a href="{{route('NonTeachingStaff')}}" class="block px-4 py-2 hover:bg-gray-100">Non-Teaching Staff</a>
-              </div>
-          </li>
-          <li><a href="{{route('Events')}}" class="text-lg hover:text-red-500">Events</a></li>
-          <li><a href="{{route('Contact')}}" class="text-lg hover:text-red-500">Contact</a></li>
+    <a href="#" 
+       onclick="event.preventDefault(); toggleSubMenu('staff');" 
+       class="text-lg flex items-center space-x-1 
+              {{ request()->is('TeachingStaff') || request()->is('NonTeachingStaff') ? 'text-red-500' : '' }}">
+        <span>Staff</span>
+        <span class="dropdown-symbol 
+              {{ request()->is('TeachingStaff') || request()->is('NonTeachingStaff') ? 'text-red-500' : '' }}">
+            &#9662;
+        </span>
+    </a>
+    <div class="sub-menu1 absolute hidden bg-white shadow-lg z-50" id="sub-staff">
+        <a href="{{ route('TeachingStaff') }}" 
+           class="block px-4 py-2 hover:bg-gray-100 
+                  {{ request()->is('TeachingStaff') ? 'text-red-500' : '' }}">
+            Teaching Staff
+        </a>
+        <a href="{{ route('NonTeachingStaff') }}" 
+           class="block px-4 py-2 hover:bg-gray-100 
+                  {{ request()->is('NonTeachingStaff') ? 'text-red-500' : '' }}">
+            Non-Teaching Staff
+        </a>
+    </div>
+</li>
+<li>
+    <a href="{{ route('Events') }}" 
+       class="text-lg hover:text-red-500 
+              {{ request()->is('Events') ? 'text-red-500' : '' }}">
+        Events
+    </a>
+</li>
+<li>
+    <a href="{{ route('Contact') }}" 
+       class="text-lg hover:text-red-500 
+              {{ request()->is('Contact') ? 'text-red-500' : '' }}">
+        Contact
+    </a>
+</li>
+
       </ul>
   </nav>
 

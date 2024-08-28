@@ -1,13 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutPageController;
+use App\Http\Controllers\StaffController;
 
 Route::get('/', function () {
     return view('Home');
 });
-// Route::get('/Home', function () {
-//     return view('Home');
-// });
 
 Route::get('/Contact', function () {
     return view('Contact');
@@ -53,3 +52,6 @@ Route::get('/postcoursePhd', function(){
     return view('postcoursePhd');
 })->name('postcoursePhd');
 
+Route::get('/Aboutpage', [AboutPageController::class, 'show'])->name('Aboutpage.show');
+Route::get('/TeachingStaff', [StaffController::class, 'teaching'])->name('TeachingStaff');
+Route::get('/NonTeachingStaff', [StaffController::class, 'nonTeaching'])->name('NonTeachingStaff');

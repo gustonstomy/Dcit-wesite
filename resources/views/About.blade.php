@@ -29,13 +29,13 @@
       <div class="bg-[#0d2980] bg-opacity-85 flex flex-col justify-center w-full lg:w-1/2 p-5 md:px-10 lg:h-[20em] ">
         <h1 class="text-white text-[1.5em] md:text-3xl mb-4  justify-center text-center">Our Vision</h1>
         <p class="text-[#ffffff] leading-[2rem] text-[1.2em] md:text-xl mb-6">
-          To produce the best trained Computer Science graduates and IT professionals through a well-equipped department with the finest researchers, qualified personnel, and state-of-the-art facilities.
+        {{ \App\Models\AboutPage::ofType('vision')->first()->content ?? 'No content to display here' }}
         </p>
       </div>
       <div class="bg-[#ff6b42] bg-opacity-85  flex flex-col justify-center w-full lg:w-1/2 p-5 md:px-10 lg:h-[20em] ">
         <h1 class="text-white text-[1.5em] md:text-3xl mb-4  justify-center text-center">Our Mission</h1>
         <p class="text-[#ffffff] leading-[2rem] text-[1.2em] md:text-xl mb-6">
-          Providing quality Computer Science and Information Technology education using the finest researchers, qualified personnel, and state-of-the-art facilities.
+         {{ \App\Models\AboutPage::ofType('mission')->first()->content ?? 'No content to display here' }}
         </p>
       </div>
     </div>
@@ -46,35 +46,7 @@
       <h1 class="text-3xl font-bold mb-6 text-center">History</h1>
 
       <p class="text-justify px-4">
-        For more than 25 years, computing courses have been provided for students from various departments by the computer centre.
-        With the recent developments and trends in the information technology (IT), the University of Cape Coast established an academic department known as the Department of Computer Science and Information Technology.
-      </p>
-      <p class="text-justify px-4">
-        The primary focus of this department is teaching and research in computing. Furthermore, the need for trained computer scientists and information technologists is one of the challenges that face the rapidly growing Ghanaian economy.
-      </p>
-      <p class="text-justify px-4">
-        The worldwide shortage of qualified human resources in IT has been the main obstacle to the deployment, exploitation and development of ICT to accelerate socio-economic development. In Ghana there is an urgent need to meet this shortfall in computer science with graduates having the requisite skills.
-      </p>
-      <p class="text-justify px-4">
-        This programme is geared toward this major area of manpower requirement by preparing qualified SSS graduate for a career in IT.
-      </p>
-      <p class="text-justify px-4">
-        The programmes that the DCSIT runs are geared towards this major area of manpower requirement. In this regard, the department admits qualified SSS graduates and train them for a career in computing. The Department offers three programs: BSc Computer Science, BSc Information Technology and a PhD in Computer Science and Application. These programs provide a comprehensive education in both theoretical and practical aspects of Computer Science (CS) and Information Technology (IT).
-      </p>
-      <p class="text-justify px-4">
-        There are a variety of exciting courses, including software engineering, artificial intelligence, internet systems and technology, computer security, algorithms, data structures, programming languages, operating systems hardware development, databases, networks design, business management and practices, as well cryptography, Data mining, Optimization as some of our doctoral studies in computing-related fields.
-      </p>
-      <p class="text-justify px-4">
-        The Computer Science and Information Technology field is very broad and dynamic. It encompasses new technological developments and its applications. Our academic program in Computer Science and Information Technology aims to provide our students a firm foundation in the field of Computer Science and its applications and prepare them to become an effective computer science professional. 
-      </p>
-      <p class="text-justify px-4">
-        The Department is dedicated to quality education and research, our graduates are highly recruited within educational and research institutions, government agencies, and private industry. You can also find detailed information about all of our degree options, courses, faculty and research throughout this website. 
-      </p>
-      <p class="text-justify px-4">
-        To prospective scholars and students, we welcome you to be part of our challenging and exciting environment in your quest to seek an opportunity to develop yourself into competent computer or information technology scientist. I hope you consider joining us. I would encourage you to spend time to navigate our webpage. 
-      </p>
-      <p class="text-justify px-4">
-            To all our dear students, we in the Computer Science and Information Technology Department look forward in making your UCC Education a success.
+       {{ \App\Models\AboutPage::ofType('history')->first()->content ?? 'No content to display here'}}
       </p>
 
       

@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,8 +12,8 @@ return new class extends Migration
     {
         Schema::create('about_pages', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['mission', 'vision','corevalues','history']);
-            $table->longText('content');
+            $table->enum('type', ['mission', 'vision', 'history']);
+            $table->longText('content'); // Ensure this is present and correct
             $table->enum('status', ['private', 'public']);
             $table->timestamps();
         });

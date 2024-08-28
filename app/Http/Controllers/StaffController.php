@@ -7,6 +7,19 @@ use Illuminate\Http\Request;
 
 class StaffController extends Controller
 {
+
+    public function teaching()
+{
+    $teachingStaff = Staff::where('type', 'teaching')->get();
+    return view('TeachingStaff', compact('teachingStaff')); // Updated view name
+}
+
+
+    public function nonTeaching()
+    {
+        $nonTeachingStaff = Staff::where('type', 'non-teaching')->get();
+        return view('NonTeachingStaff', compact('nonTeachingStaff'));
+    }
     /**
      * Display a listing of the resource.
      */

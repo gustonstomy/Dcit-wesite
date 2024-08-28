@@ -33,7 +33,7 @@
                         01:00 PM - 03:00 PM
                     </div>
                     <div class="flex items-center gap-2">
-                        <img src="../images/lo.png" alt="Location Icon" class="w-12 h-12">
+                        <img src="/lo.png" alt="Location Icon" class="w-12 h-12">
                         Main Auditorium
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                         01:00 PM - 03:00 PM
                     </div>
                     <div class="flex items-center gap-2">
-                        <img src="../images/lo.png" alt="Location Icon" class="w-12 h-12">
+                        <img src="/lo.png" alt="Location Icon" class="w-12 h-12">
                         Huawei Lab
                     </div>
                 </div>

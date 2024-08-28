@@ -7,59 +7,15 @@ use Illuminate\Http\Request;
 
 class AboutPageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(AboutPage $aboutPage)
-    {
-        //
-    }
+{
+    $visionContent = AboutPage::ofType('vision')->first()->content;
+    $missionContent = AboutPage::where('type', 'mission')->value('content');
+    $historyContent = AboutPage::where('type', 'history')->value('content');
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(AboutPage $aboutPage)
-    {
-        //
-    }
+    // Debug output to check fetched values
+    // dd($visionContent, $missionContent, $historyContent);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, AboutPage $aboutPage)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(AboutPage $aboutPage)
-    {
-        //
-    }
+    return view('aboutpage', compact('visionContent', 'missionContent', 'historyContent'));
+}
 }

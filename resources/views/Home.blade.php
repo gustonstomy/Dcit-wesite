@@ -18,31 +18,31 @@
   <!-- ==================slider==================================== -->
    <div class="relative w-full h-[35rem] mb-8" id="slider">
         <div class="absolute w-full h-full opacity-100 transition-opacity duration-500 ease-in-out">
-            <img src="../images/BS.jpg" alt="Slide 1"  class="w-full h-full object-cover">
+            <img src="/BS.jpg" alt="Slide 1"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
                 <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">BSc. Computer Science Studentswho graduate from the programme will be able to apply their skills to a variety of industries</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
         </div>
          <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
-            <img src="../images/Alor.jpg" alt="Slide 4"  class="w-full h-full object-cover">
+            <img src="/Alor.jpg" alt="Slide 4"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
                 <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">Undergraduate Programmes Bachelor of Computer Science Bachelor of Information Technology</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
         </div>
         <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
-            <img src="../images/GRAT1.jpg" alt="Slide 2"  class="w-full h-full object-cover">
+            <img src="/GRAT1.jpg" alt="Slide 2"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
                 <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">BSc. Computer Science Studentswho graduate from the programme will be able to apply their skills to a variety of industries</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
         </div>
         <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
-            <img src="../images/BGT.jpg" alt="Slide 3"  class="w-full h-full object-cover">
+            <img src="/BGT.jpg" alt="Slide 3"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
                 <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">BSc. Computer Science Studentswho graduate from the programme will be able to apply their skills to a variety of industries</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
         </div>
         <div class="absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out">
-            <img src="../images/NOT7.jpg" alt="Slide 5"  class="w-full h-full object-cover">
+            <img src="/NOT7.jpg" alt="Slide 5"  class="w-full h-full object-cover">
             <div class="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-md">
                 <h2 class="m-0 w-[14em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">Your further in Tech begins here!Apply now to secure your spot <br>at  UCC  and embark on ajourney  filled with  innovation and endless opportunities</h2 class="m-0 w-[16em] md:w-[16em] text-xl md:text-2xl whitespace-pre-wrap">
             </div>
@@ -63,7 +63,7 @@
     <!-- Image Section -->
     <div class="w-full xl:w-1/3 flex items-center justify-center lg:ml-10 xl:mr-40">
       <div class="text-center lg:w-100">
-        <img src="../images/hod.png" alt="Person" class="object-cover w-full xl:w-auto h-auto rounded-lg lg:h-[45vh] xl:h-[69vh]" />
+        <img src="/hod.png" alt="Person" class="object-cover w-full xl:w-auto h-auto rounded-lg lg:h-[45vh] xl:h-[69vh]" />
         <div class="mt-4 text-gray-900">
           <h1 class="text-xl font-semibold">Dr. Abdul-Lateef Yussif</h1>
           <h4 class="text-lg">Head Of Department</h4>
@@ -77,7 +77,7 @@
   <div class="flex flex-col lg:flex-row xl:flex-row items-center gap-8 lg:gap-12 xl:pl-40 xl:pr-40">
     <!-- Feature Card 1 -->
     <div class="flex flex-col xl:flex-row items-center mb-8 w-full lg:w-1/3 border border-transparent">
-      <img src="../images/globe.png" alt="icon" class="mb-4 w-24 h-24 object-cover">
+      <img src="/globe.png" alt="icon" class="mb-4 w-24 h-24 object-cover">
       <div class="flex flex-col text-center">
         <h3 class="text-blue-900 text-xl font-bold mb-2">Global Competition</h3>
         <p class="text-gray-600 text-md break-words">Our students are in the global competition.</p>
@@ -85,7 +85,7 @@
     </div>
     <!-- Feature Card 2 -->
     <div class="flex flex-col xl:flex-row items-center mb-8 w-full lg:w-1/3 border border-transparent">
-      <img src="../images/globe.png" alt="icon" class="mb-4 w-24 h-24 object-cover">
+      <img src="/globe.png" alt="icon" class="mb-4 w-24 h-24 object-cover">
       <div class="flex flex-col text-center">
         <h3 class="text-blue-900 text-xl font-bold mb-2">Online Tuition</h3>
         <p class="text-gray-600 text-md break-words">We facilitate Online Tuition.</p>
@@ -93,7 +93,7 @@
     </div>
     <!-- Feature Card 3 -->
     <div class="flex flex-col xl:flex-row items-center mb-8 w-full lg:w-1/3 border border-transparent">
-      <img src="../images/globe.png" alt="icon" class="mb-4 w-24 h-24 object-cover">
+      <img src="/globe.png" alt="icon" class="mb-4 w-24 h-24 object-cover">
       <div class="flex flex-col text-center">
         <h3 class="text-blue-900 text-xl font-bold mb-2">Best Institution</h3>
         <p class="text-gray-600 text-md break-words">Overall Best University in West Africa.</p>
@@ -110,7 +110,7 @@
     <!-- Undergraduate Section -->
     <div class="flex flex-col items-center text-center p-2 xl:p-0 w-[20rem] h-[60vh] md:w-[25rem] md:h-[65vh]  sm:w-auto sm:h-[65vh] md:w-[40rem] lg:w-[32rem] lg:h-[45vh] xl:w-[35rem] xl:h-[70vh] lg:ml-2 xl:ml-40">
       <img
-        src="../images/comput-SC.png"
+        src="/comput-SC.png"
         alt="Undergraduate"
         class="h-[15rem] w-[25rem] rounded-xl mb-2 sm:h-[20rem] sm:w-[40rem] md:h-[30rem] md:w-[40rem] lg:w-[60rem] xl:w-[35rem] xl:h-[70vh]"
       />
@@ -125,7 +125,7 @@
     <!-- Postgraduate Section -->
     <div class="flex flex-col items-center text-center p-2 xl:p-0 w-[20rem] h-[60vh] md:w-[25rem] md:h-[65vh]  sm:w-auto sm:h-[65vh] md:w-[40rem] lg:w-[32rem] lg:h-[45vh] xl:w-[35rem] xl:h-[70vh]">
       <img
-        src="../images/R&H.png"
+        src="/R&H.png"
         alt="Postgraduate"
         class="h-[15rem] w-[25rem] rounded-xl mb-2 sm:h-[20rem] sm:w-[40rem] md:h-[30rem] md:w-[40rem] md:mb-8 lg:w-[60rem] xl:w-[35rem] xl:h-[70vh]"
       />
@@ -146,7 +146,7 @@
 
     <!-- Social Events -->
     <div class="bg-white w-full md:w-[80%] lg:w-[45%] xl:w-[25%] h-[30vh] md:h-[40vh] lg:h-[30vh] xl:h-[40vh] p-5 rounded-lg text-left flex flex-col items-start mb-7 lg:mx-3">
-      <img src="../images/Frame-f.jpg" alt="Social Events" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
+      <img src="/Frame-f.jpg" alt="Social Events" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
       <h3 class="text-2xl md:text-[3rem] lg:text-[2.2rem] xl:text-[1.8rem] text-black leading-relaxed md:mt-8 xl:mt-0 mb-4 xl:mb-2">Social Events</h3>
       <p class="text-xl md:text-[2rem] lg:text-[1.3rem] xl:text-[1rem] text-gray-600 leading-relaxed md:leading-normal">
         On-campus events shape the social and intellectual character of students.
@@ -155,7 +155,7 @@
 
     <!-- Certified Lecturers -->
     <div class="bg-white w-full md:w-[80%] lg:w-[45%] xl:w-[25%] h-[30vh] md:h-[40vh] lg:h-[30vh] xl:h-[40vh] p-5 rounded-lg text-left flex flex-col items-start mb-7 lg:mx-3">
-      <img src="../images/Frame-s.png" alt="Certified Lecturers" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
+      <img src="/Frame-s.png" alt="Certified Lecturers" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
       <h3 class="text-2xl md:text-[3rem] lg:text-[2.2rem] xl:text-[1.8rem] text-black leading-relaxed md:mt-8 xl:mt-0 mb-4 xl:mb-2">Certified Lecturers</h3>
       <p class="text-xl md:text-[2rem] lg:text-[1.3rem] xl:text-[1rem] text-gray-600 leading-relaxed md:leading-normal">
         Teachers with extensive experience and certification at the highest level.
@@ -164,7 +164,7 @@
 
     <!-- Internship Opportunities -->
     <div class="bg-white w-full md:w-[80%] lg:w-[45%] xl:w-[25%] h-[30vh] md:h-[40vh] lg:h-[30vh] xl:h-[40vh] p-5 rounded-lg text-left flex flex-col items-start mb-7 lg:mx-3">
-      <img src="../images/Frame-t.png" alt="Internship Opportunities" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
+      <img src="/Frame-t.png" alt="Internship Opportunities" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
       <h3 class="text-2xl md:text-[3rem] lg:text-[2.2rem] xl:text-[1.8rem] text-black leading-relaxed md:mt-8 xl:mt-0 mb-4 xl:mb-2">Internship Opportunities</h3>
       <p class="text-xl md:text-[2rem] lg:text-[1.3rem] xl:text-[1rem] text-gray-600 leading-relaxed md:leading-normal">
         Our students can participate in the internships program with the leading companies.
@@ -173,7 +173,7 @@
 
     <!-- Global Community -->
     <div class="bg-white w-full md:w-[80%] lg:w-[45%] xl:w-[25%] h-[30vh] md:h-[40vh] lg:h-[30vh] xl:h-[40vh] p-5 rounded-lg text-left flex flex-col items-start mb-7 lg:mx-3">
-      <img src="../images/Frame-ff.jpg" alt="Global Community" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
+      <img src="/Frame-ff.jpg" alt="Global Community" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
       <h3 class="text-2xl md:text-[3rem] lg:text-[2.2rem] xl:text-[1.8rem] text-black leading-relaxed md:mt-8 xl:mt-0 mb-4 xl:mb-2">Global Community</h3>
       <p class="text-xl md:text-[2rem] lg:text-[1.3rem] xl:text-[1rem] text-gray-600 leading-relaxed md:leading-normal">
         We provide education to students from all around the world.
@@ -182,7 +182,7 @@
 
     <!-- Practical Education -->
     <div class="bg-white w-full md:w-[80%] lg:w-[45%] xl:w-[25%] h-[30vh] md:h-[40vh] lg:h-[30vh] xl:h-[40vh] p-5 rounded-lg text-left flex flex-col items-start mb-7 lg:mx-3">
-      <img src="../images/Frame-f.jpg" alt="Practical Education" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
+      <img src="/Frame-f.jpg" alt="Practical Education" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
       <h3 class="text-2xl md:text-[3rem] lg:text-[2.2rem] xl:text-[1.8rem] text-black leading-relaxed md:mt-8 xl:mt-0 mb-4 xl:mb-2">Practical Education</h3>
       <p class="text-xl md:text-[2rem] lg:text-[1.3rem] xl:text-[1rem] text-gray-600 leading-relaxed md:leading-normal">
         Get theoretical education as well as practical understandings.
@@ -191,7 +191,7 @@
 
     <!-- Extra Activities -->
     <div class="bg-white w-full md:w-[80%] lg:w-[45%] xl:w-[25%] h-[30vh] md:h-[40vh] lg:h-[30vh] xl:h-[40vh] p-5 rounded-lg text-left flex flex-col items-start mb-7 lg:mx-3">
-      <img src="../images/Frame-l.jpg" alt="Extra Activities" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
+      <img src="/Frame-l.jpg" alt="Extra Activities" class="w-[80px] h-[80px] mb-3 mt-2 md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[60px] xl:h-[60px]">
       <h3 class="text-2xl md:text-[3rem] lg:text-[2.2rem] xl:text-[1.8rem] text-black leading-relaxed md:mt-8 xl:mt-0 mb-4 xl:mb-2">Extra Activities</h3>
       <p class="text-xl md:text-[2rem] lg:text-[1.3rem] xl:text-[1rem] text-gray-600 leading-relaxed md:leading-normal">
         Our students can participate in various extra-curricular activities.
@@ -214,7 +214,7 @@
                         01:00 PM - 03:00 PM
                     </div>
                     <div class="flex items-center gap-2">
-                        <img src="../images/lo.png" alt="Location Icon" class="w-12 h-12">
+                        <img src="/lo.png" alt="Location Icon" class="w-12 h-12">
                         Main Auditorium
                     </div>
                 </div>
@@ -233,7 +233,7 @@
                         01:00 PM - 03:00 PM
                     </div>
                     <div class="flex items-center gap-2">
-                        <img src="../images/lo.png" alt="Location Icon" class="w-12 h-12">
+                        <img src="/lo.png" alt="Location Icon" class="w-12 h-12">
                         Huawei Lab
                     </div>
                 </div>
