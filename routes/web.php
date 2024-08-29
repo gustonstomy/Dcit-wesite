@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\AboutPageController;
+use App\Http\Controllers\UpcomingEventsController;
 
 Route::get('/', function () {
     return view('Home');
@@ -55,3 +58,11 @@ Route::get('/postcoursePhd', function(){
 Route::get('/Aboutpage', [AboutPageController::class, 'show'])->name('Aboutpage.show');
 Route::get('/TeachingStaff', [StaffController::class, 'teaching'])->name('TeachingStaff');
 Route::get('/NonTeachingStaff', [StaffController::class, 'nonTeaching'])->name('NonTeachingStaff');
+Route::get('/Events', [UpcomingEventsController::class, 'index'])->name('Events');
+Route::get('/', [HomePageController::class, 'index'])->name('home.index');
+// Route to show the contact form
+Route::get('/contact', [MessageController::class, 'create'])->name('contact.create');
+
+// Route to handle form submission
+Route::post('/contact', [MessageController::class, 'store'])->name('contact.store');
+

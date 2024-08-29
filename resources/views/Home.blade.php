@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ asset('UCC.png') }}" type="image/x-icon">
     <title>Home</title>
 </head>
 <body>
@@ -53,20 +54,16 @@
     <div class="flex flex-col lg:flex-row items-center justify-between p-5 mb-20 md:gap-8 gap-2 xl:gap-1">
     <!-- Text Section -->
     <div class="w-full xl:w-2/5 text-justify text-gray-600 text-base lg:text-lg mb-8 lg:ml-1 xl:ml-40">
-      <p>The University of Cape Coast has established the Department of Computer Science and Information Technology to address the need for trained computer scientists and information technologists in Ghana’s rapidly growing economy.</p><br />
-      <p>This move aims to overcome the shortage of qualified IT professionals worldwide that hinders socio-economic development.</p>
-      <p>The department offers programs such as BSc Computer Science, BSc Information Technology, and a PhD in Computer Science and Application.</p><br />
-      <p>These programs provide a comprehensive education covering various aspects of Computer Science and Information Technology, including software engineering, artificial intelligence, internet systems, computer security, and more.</p><br />
-      <p>The department’s focus is to prepare qualified high school graduates for careers in computing through these programs.</p>
+        {!! nl2br(e($homePage->content)) !!}
     </div>
     
     <!-- Image Section -->
     <div class="w-full xl:w-1/3 flex items-center justify-center lg:ml-10 xl:mr-40">
       <div class="text-center lg:w-100">
-        <img src="/hod.png" alt="Person" class="object-cover w-full xl:w-auto h-auto rounded-lg lg:h-[45vh] xl:h-[69vh]" />
+        <img src="{{ asset('/' . $homePage->media) }}" alt="Person" class="object-cover w-full xl:w-auto h-auto rounded-lg lg:h-[45vh] xl:h-[69vh]" />
         <div class="mt-4 text-gray-900">
-          <h1 class="text-xl font-semibold">Dr. Abdul-Lateef Yussif</h1>
-          <h4 class="text-lg">Head Of Department</h4>
+          <h1 class="text-xl font-semibold">{{ $homePage->subpage_name }}</h1>
+          <h4 class="text-lg">{{ $homePage->rank }}</h4>
         </div>
       </div>
     </div>

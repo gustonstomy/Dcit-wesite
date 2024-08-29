@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <link rel="icon" href="{{ asset('UCC.png') }}" type="image/x-icon">
+    <title>NonTeachingStaff Page</title>
      <link rel="stylesheet" href="NonTeachingStaff.css">
 </head>
 <body>
@@ -49,7 +50,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-8 md:px-16 lg:px-32 mt-8">
             @foreach ($nonTeachingStaff as $staff)
             <a href="{{ $staff->link }}" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg text-center shadow-lg border border-gray-300">
-                <img src="{{ asset('/' . $staff->image) }}" alt="{{ $staff->name }}" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
+                <img src="{{ asset('/' . $staff->media) }}" alt="{{ $staff->name }}" class="w-48 h-48 object-cover rounded-full mx-auto mb-4">
                 <h3 class="text-xl font-semibold mb-2">{{ $staff->name }}</h3>
                 <p class="text-gray-600">{{ $staff->position }}</p>
             </a>

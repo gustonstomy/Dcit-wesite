@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{{ asset('UCC.png') }}" type="image/x-icon">
     <title>Contact us </title>
   
 </head>
@@ -22,21 +23,21 @@
 
   <div class="flex flex-wrap justify-around p-5 md:p-10 h-[30vh] flex-col lg:flex-row md:items-start md:h-auto">
   <div class="flex items-center mb-5 last:mb-0 md:mb-5 md:last:mb-0 xl:my-16">
-    <img src="../images/Frame-52-2-1.jpg" alt="Phone icon" class="w-14 h-14 mr-4 md:w-20 md:h-20" />
+    <img src="/Frame-52-2-1.jpg" alt="Phone icon" class="w-14 h-14 mr-4 md:w-20 md:h-20" />
     <div class="contact-details">
       <h3 class="text-xl font-bold mb-2 md:text-2xl">Phone</h3>
       <p class="text-base text-gray-600 md:text-lg">+01 2345 67890</p>
     </div>
   </div>
   <div class="flex items-center mb-5 last:mb-0 md:mb-5 md:last:mb-0 xl:my-16">
-    <img src="../images/Frame-52-3-1.jpg" alt="Email icon" class="w-14 h-14 mr-4 md:w-20 md:h-20" />
+    <img src="/Frame-52-3-1.jpg" alt="Email icon" class="w-14 h-14 mr-4 md:w-20 md:h-20" />
     <div class="contact-details">
       <h3 class="text-xl font-bold mb-2 md:text-2xl">Email</h3>
       <p class="text-base text-gray-600 md:text-lg">dcsit@ucc.edu.gh</p>
     </div>
   </div>
   <div class="flex items-center mb-5 last:mb-0 md:mb-5 md:last:mb-0 xl:my-16">
-    <img src="../images/Frame-52-4.jpg" alt="Location icon" class="w-14 h-14 mr-4 md:w-20 md:h-20" />
+    <img src="/Frame-52-4.jpg" alt="Location icon" class="w-14 h-14 mr-4 md:w-20 md:h-20" />
     <div class="contact-details">
       <h3 class="text-xl font-bold mb-2 md:text-2xl">Location</h3>
       <p class="text-base text-gray-600 md:text-lg">UCC, Cape Coast</p>
@@ -45,18 +46,35 @@
 </div>
 
 <!-- /* =======================================Leave a Message section=================================== */ -->
-<div class="leave-message-container text-center bg-blue-50 p-12 rounded-lg w-[20em] md:w-[35em] mx-auto shadow-md">
-        <h1 class="text-2xl lg:text-3xl mb-4">Leave us a Message</h1>
-        <p class="text-lg lg:text-xl  mb-5 text-gray-600">Leave us a message and we will get back to you</p>
-        <form class="leave-message-form flex flex-col gap-4 md:gap-8" id="leaveMessageForm">
-            <input type="text" name="name" placeholder="Full Name" class="p-5 text-xl border border-gray-300 rounded-full w-full mt-4 md:mt-0" required>
-            <input type="email" name="email" placeholder="Email" class="p-5 text-xl border border-gray-300 rounded-full w-full" required>
-            <span id="emailError" class="text-red-500 text-sm"></span>
-            <input type="text" name="subject" placeholder="Subject" class="p-5 text-xl border border-gray-300 rounded-full w-full" required>
-            <textarea name="message" placeholder="Message" class="p-5 text-xl border border-gray-300 rounded-3xl w-full h-48 resize-none" required></textarea>
-            <button type="submit" class="p-4 text-xl bg-orange-500 text-white rounded-full cursor-pointer hover:bg-orange-400">Submit Message</button>
-        </form>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
     </div>
+@endif
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+<div class="leave-message-container text-center bg-blue-50 p-12 rounded-lg w-[20em] md:w-[35em] mx-auto shadow-md">
+    <h1 class="text-2xl lg:text-3xl mb-4">Leave us a Message</h1>
+    <p class="text-lg lg:text-xl mb-5 text-gray-600">Leave us a message and we will get back to you</p>
+    <form class="leave-message-form flex flex-col gap-4 md:gap-8" id="leaveMessageForm" method="POST" action="{{ route('contact.store') }}">
+        @csrf
+        <input type="text" name="name" placeholder="Full Name" class="p-5 text-xl border border-gray-300 rounded-full w-full mt-4 md:mt-0" required>
+        <input type="email" name="email" placeholder="Email" class="p-5 text-xl border border-gray-300 rounded-full w-full" required>
+        <span id="emailError" class="text-red-500 text-sm"></span>
+        <input type="text" name="subject" placeholder="Subject" class="p-5 text-xl border border-gray-300 rounded-full w-full" required>
+        <textarea name="message" placeholder="Message" class="p-5 text-xl border border-gray-300 rounded-3xl w-full h-48 resize-none" required></textarea>
+        <button type="submit" class="p-4 text-xl bg-orange-500 text-white rounded-full cursor-pointer hover:bg-orange-400">Submit Message</button>
+    </form>
+</div>
+
 
 
 

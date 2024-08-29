@@ -12,7 +12,8 @@ class UpcomingEventsController extends Controller
      */
     public function index()
     {
-        //
+         $events = UpcomingEvents::all();
+        return view('Events', compact('events'));
     }
 
     /**
@@ -20,7 +21,7 @@ class UpcomingEventsController extends Controller
      */
     public function create()
     {
-        //
+       return view('Events.create');
     }
 
     /**
@@ -28,7 +29,23 @@ class UpcomingEventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            'date' => 'required|date',
+            'time' => 'required|date_format:H:i',
+            'media' => 'nullable|image',
+            'status' => 'required|in:upcoming,ongoing,passed',
+        ]);
+
+        if ($request->hasFile('media')) {
+            $validatedData['media'] = $request->file('media')->store('event-images', 'public');
+        }
+
+        UpcomingEvents::create($validatedData);
+
+        return redirect()->route('Events')->with('success', 'Event created successfully.');
     }
 
     /**
@@ -36,7 +53,7 @@ class UpcomingEventsController extends Controller
      */
     public function show(UpcomingEvents $upcomingEvents)
     {
-        //
+         return view('Events.show', compact('upcomingEvent'));
     }
 
     /**
@@ -44,7 +61,7 @@ class UpcomingEventsController extends Controller
      */
     public function edit(UpcomingEvents $upcomingEvents)
     {
-        //
+         return view('Events.edit', compact('upcomingEvent'));
     }
 
     /**
@@ -52,7 +69,23 @@ class UpcomingEventsController extends Controller
      */
     public function update(Request $request, UpcomingEvents $upcomingEvents)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            'date' => 'required|date',
+            'time' => 'required|date_format:H:i',
+            'media' => 'nullable|image',
+            'status' => 'required|in:upcoming,ongoing,passed',
+        ]);
+
+        if ($request->hasFile('media')) {
+            $validatedData['media'] = $request->file('media')->store('event-images', 'public');
+        }
+
+        $upcomingEvents->update($validatedData);
+
+        return redirect()->route('Events')->with('success', 'Event updated successfully.');
     }
 
     /**
@@ -60,6 +93,9 @@ class UpcomingEventsController extends Controller
      */
     public function destroy(UpcomingEvents $upcomingEvents)
     {
-        //
+         $upcomingEvents->delete();
+        return redirect()->route('Events')->with('success', 'Event deleted successfully.');
     }
+
+    
 }

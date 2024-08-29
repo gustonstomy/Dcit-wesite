@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class UpcomingEvents extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'location',
+        'description',
+        'date',
+        'time',
+        'media',
+        'status',
+    ];
+
+    protected $casts = [
+        'date' => 'date',
+        'time' => 'datetime:H:i',
+    ];
 }

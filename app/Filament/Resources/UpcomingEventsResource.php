@@ -23,7 +23,31 @@ class UpcomingEventsResource extends Resource
     {
         return $form
             ->schema([
-                //
+                 Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('location')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\DatePicker::make('date')
+                    ->required(),
+                Forms\Components\TimePicker::make('time')
+                    ->required(),
+                Forms\Components\FileUpload::make('media')
+                    ->image()
+                    // ->directory('event-images')
+                    ->preserveFilenames()
+                    ->nullable(),
+                    Forms\Components\MarkdownEditor::make('description') // Changed to MarkdownEditor
+                    ->required(),
+                    // ->maxLength(225),
+                Forms\Components\Select::make('status')
+                    ->options([
+                        'upcoming' => 'Upcoming',
+                        'ongoing' => 'Ongoing',
+                        'passed' => 'Passed',
+                    ])
+                    ->required(),
             ]);
     }
 
@@ -31,10 +55,23 @@ class UpcomingEventsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')->sortable(),
+                Tables\Columns\TextColumn::make('location')->sortable(),
+                Tables\Columns\TextColumn::make('description')->sortable()
+                ->label('content')
+                ->limit(50),
+                Tables\Columns\TextColumn::make('date')->sortable(),
+                Tables\Columns\TextColumn::make('time')->sortable(),
+                Tables\Columns\ImageColumn::make('media')->disk('public'),
+                Tables\Columns\TextColumn::make('status')->sortable(),
             ])
             ->filters([
-                //
+                 Tables\Filters\SelectFilter::make('status')
+                    ->options([
+                        'upcoming' => 'Upcoming',
+                        'ongoing' => 'Ongoing',
+                        'passed' => 'Passed',
+                    ]),
             ])
             ->actions([
                Tables\Actions\ActionGroup::make([
