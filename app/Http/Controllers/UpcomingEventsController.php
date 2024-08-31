@@ -10,12 +10,19 @@ class UpcomingEventsController extends Controller
     /**
      * Display a listing of the resource.
      */
+      public function home()
+    {
+        $homeEvents = UpcomingEvents::limit(2)->get(); // Fetch exactly two events
+         return view('Home', compact('homeEvents'));
+    }
+
     public function index()
     {
          $events = UpcomingEvents::all();
         return view('Events', compact('events'));
+        
     }
-
+   
     /**
      * Show the form for creating a new resource.
      */

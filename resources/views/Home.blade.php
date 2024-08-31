@@ -197,47 +197,33 @@
   </div>
 
 <!-- ====================Events section============================================ -->
-  <div class="flex flex-col items-center text-center py-8 mt-16 mb-16">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Event 1 -->
+ <div class="flex flex-col items-center text-center py-8 mt-16 mb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Loop through home events -->
+        @foreach ($homeEvents as $event)
             <div class="bg-[#f2f8f7] p-6 rounded-lg w-80 md:w-[40rem] lg:w-[30rem] xl:w-[35rem] text-left shadow-md">
-                <div class="bg-[#ff6b42] text-white py-2 px-4 rounded-md text-sm inline-block">
-                    <span>18 Feb</span>
+                <div class="w-[30em] ml-4 mb-3 ">
+                    <img src="{{ asset('/' . $event->media) }}" alt="img" class="rounded-[2em] updatable">
                 </div>
-                <h3 class="mt-4 text-xl text-black">CITSA Week Celebration 2024</h3>
+                <div class="bg-[#ff6b42] text-white py-2 px-4 rounded-md text-sm inline-block">
+                    <span>{{ $event->date->format('d M') }}</span>
+                </div>
+                <h3 class="mt-4 text-xl text-black">{{ $event->name }}</h3>
                 <div class="my-4 text-lg text-gray-600 flex flex-col items-start gap-2">
                     <div class="flex items-center">
                         <span class="border-2 border-gray-600 rounded-full w-6 h-6 text-center leading-5 mr-2">➜</span>
-                        01:00 PM - 03:00 PM
+                        {{ $event->time->format('h:i A') }}
                     </div>
                     <div class="flex items-center gap-2">
                         <img src="/lo.png" alt="Location Icon" class="w-12 h-12">
-                        Main Auditorium
+                        {{ $event->location }}
                     </div>
                 </div>
-                <p class="text-gray-600 mb-4">CITSA is excited to announce CITSA Week Celebration 2024! This year's celebration will be held from February 20-24, 2024, and will feature a variety of events and activities for students to enjoy.</p>
+                <p class="text-gray-600 mb-4">{{ $event->description }}</p>
             </div>
-
-            <!-- Event 2 -->
-            <div class="bg-[#f2f8f7] p-6 rounded-lg w-80 md:w-[40rem] lg:w-[30rem] xl:w-[35rem] text-left shadow-md">
-                <div class="bg-[#ff6b42] text-white py-2 px-4 rounded-md text-sm inline-block">
-                    <span>18 Feb</span>
-                </div>
-                <h3 class="mt-4 text-xl text-black">Women in Tech: A Panel Discussion</h3>
-                <div class="my-4 text-lg text-gray-600 flex flex-col items-start gap-2">
-                    <div class="flex items-center">
-                        <span class="border-2 border-gray-600 rounded-full w-6 h-6 text-center leading-5 mr-2">➜</span>
-                        01:00 PM - 03:00 PM
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <img src="/lo.png" alt="Location Icon" class="w-12 h-12">
-                        Huawei Lab
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">This panel discussion will feature a group of women working in the tech industry. The panelists will share their experiences and insights on a variety of topics.</p>
-            </div>
-        </div>
+        @endforeach
     </div>
+</div>
 
  
  <!--=======================Footer====================== -->

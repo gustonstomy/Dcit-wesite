@@ -65,4 +65,3 @@ Route::get('/contact', [MessageController::class, 'create'])->name('contact.crea
 
 // Route to handle form submission
 Route::post('/contact', [MessageController::class, 'store'])->name('contact.store');
-

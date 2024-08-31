@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\HomePage;
 use Illuminate\Http\Request;
+use App\Models\UpcomingEvents;
 
 class HomePageController extends Controller
 {
@@ -14,7 +15,12 @@ class HomePageController extends Controller
     {
        // Fetch the single home page record
         $homePage = HomePage::first(); // This will return the first record or null if not found
-        return view('Home', compact('homePage')); // Pass data to the view
+        // return view('Home', compact('homePage')); // Pass data to the view
+        // Fetch the home events, limiting to two events
+        $homeEvents = UpcomingEvents::limit(2)->get(); // Fetch exactly two events
+
+        // Pass both homePage and homeEvents data to the view
+        return view('Home', compact('homePage', 'homeEvents'));
     }
 
     /**

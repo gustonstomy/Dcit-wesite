@@ -11,7 +11,7 @@
 </div>
 
 <!--====================Footer Section ============================================= -->
-<div class="py-8 md:py-16 px-6 lg:px-16 xl:px-44 h-[65vh] md:h-[40vh] xl:h-[60vh] bg-gray-900 text-white font-sans">
+<div class="py-8 md:py-16 px-6 lg:px-16 xl:px-44 h-[70vh] md:h-[40vh] xl:h-[60vh] bg-gray-900 text-white font-sans">
     <div class="flex flex-wrap justify-between mb-12">
         <div class="mb-6 md:mb-0">
             <h4 class="text-xl font-medium mb-8">Menus</h4>
