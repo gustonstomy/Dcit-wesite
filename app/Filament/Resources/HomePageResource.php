@@ -18,6 +18,7 @@ use Filament\Forms\Components\MarkdownEditor;
 use App\Filament\Resources\HomePageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\HomePageResource\RelationManagers;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class HomePageResource extends Resource
 {
@@ -41,7 +42,7 @@ class HomePageResource extends Resource
                                     ->required()
                                     ->maxLength(255),
                                 
-                                MarkdownEditor::make('content')
+                                TinyEditor::make('content')
                                     ->required()
                                     // ->maxLength(5000)  Adjust the max length as needed
                                     ->placeholder('Enter the content for the home page...'),

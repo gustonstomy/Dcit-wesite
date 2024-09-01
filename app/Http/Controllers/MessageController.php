@@ -31,7 +31,8 @@ class MessageController extends Controller
             'messageContent' => $request->message,
         ], function ($mail) use ($request) {
             $mail->from($request->email, $request->name);
-            $mail->to('gustomstomy@gmail.com'); // Replace with your email address
+            $mail->replyTo($request->email, $request->name); // Use replyTo for submitted email
+            $mail->to('johnclecks@gmail.com'); // Replace with your email address
             $mail->subject($request->subject);
         });
 // dd('Mail attempted to be sent');

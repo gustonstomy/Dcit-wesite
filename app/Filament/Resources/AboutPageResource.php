@@ -2,18 +2,19 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AboutPageResource\Pages;
-use App\Filament\Resources\AboutPageResource\RelationManagers;
-use App\Models\AboutPage;
 use Filament\Forms;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
+use App\Models\AboutPage;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Filament\Forms\Components\Section;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\MarkdownEditor;
+use App\Filament\Resources\AboutPageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\AboutPageResource\RelationManagers;
 
 class AboutPageResource extends Resource
 {
@@ -27,7 +28,7 @@ class AboutPageResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Manage Your About Page')
                     ->schema([
-                        Forms\Components\MarkdownEditor::make('content')
+                        TinyEditor::make('content')
                         ->label('content')
                         ->columnSpanFull()
                         ->fileAttachmentsDirectory('about_pages')
