@@ -1,67 +1,102 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Department Website with Laravel, Filament, Tailwind CSS, and JavaScript
+This project is a web application for the Department of Computer Science & Information
+Technology. It utilizes Laravel for the backend, Filament for the admin dashboard, Blade
+templates for frontend views, Tailwind CSS for styling, and JavaScript for dynamic interactions.
+The website provides information about the department and facilitates user interactions such
+as contacting the department through a message form.
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [License](#license)
+## Features
+- **Dynamic Frontend**: The frontend is built using Blade templates, providing a seamless and
+dynamic user experience.
+- **Admin Dashboard**: A powerful admin panel is integrated using Filament, allowing easy
+management of the website's content and settings.
+- **Responsive Design**: Tailwind CSS is used to ensure the site is responsive and looks great
+on all devices.
+- **Interactive Navigation**: A hamburger menu implemented in JavaScript for improved user
+interaction on mobile and tablet views.
+- **Contact Form**: Users can leave messages through a contact form. The form uses Laravel's
+validation features and sends an email using the details provided by the user.
+- **Error Handling and Success Messages**: Real-time feedback on form submissions,
+displaying validation errors and success messages.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Technologies Used
+- **Backend**: [Laravel](https://laravel.com/) - A PHP framework for building robust web
+applications.
+- **Admin Panel**: [Filament](https://filamentphp.com/) - A Laravel admin panel frameworkmanaging the backend easily.
+- **Frontend**: Blade templates are used for rendering dynamic views.
+- **CSS Framework**: [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framewfor designing clean and modern UI.
+- **JavaScript**: Custom JavaScript for handling dynamic elements like the hamburger men- 
+- **Database**: MySQL is used for storing data.
+## Installation
+To get a local copy of the project up and running, follow these simple steps:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/gustonstomy/department-website.git
+   ```
+2. **Navigate to the project directory**:
+   ```bash
+   cd Dcit-wesite 
+   ```
+3. **Install the dependencies**:
+   ```bash
+   composer install
+   npm install
+   ```
+4. **Set up environment variables**:
+   - Copy `.env.example` to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Update the `.env` file with your database and mail configurations.
 
-## About Laravel
+   5. **Generate an application key**:
+   ```bash
+   php artisan key:generate
+   ```
+6. **Run database migrations**:
+   ```bash
+   php artisan migrate
+   ```
+7. **Compile the assets**:
+   ```bash
+   npm run dev
+   ```
+8. **Serve the application**:
+   ```bash
+   php artisan serve
+   ```
+   Visit `http://127.0.0.1:8000` in your browser to view the website.
+## Usage
+### Admin Dashboard
+- Access the Filament admin dashboard by visiting `/admin1` (e.g., `http://127.0.0.1:8000/
+admin1`).
+- Log in using the admin credentials set during the Filament installation process.
+- Use the dashboard to manage content, view messages, and update settings.
+### Contact Form
+- Users can access the contact form through the "Contact Us" page.
+- Submitted messages are sent via email using the SMTP settings configured in the `.env` file.
+### Navigation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
+- The website features a responsive hamburger menu for easy navigation on mobile devices.
+The menu is implemented with JavaScript and styled using Tailwind CSS.
+## Folder Structure
+The key folders and files for this project are:
+- **`app/Http/Controllers/MessageController.php`**: Handles contact form submissions and
+sends emails.
+- **`resources/views/`**: Contains Blade templates for the frontend.
+  - `layouts/`: Shared layout files (header, footer, etc.).
+  - `includes/`: Reusable components (navbar, etc.).
+  - `emails/`: Email templates used for sending messages.
+  - `contact.blade.php`: The contact form page.
+- **`public/`**: Public assets (CSS, JavaScript, images).
+- **`routes/web.php`**: Defines web routes for the application.
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# Dcit-wesite" 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more
+details.
+---
